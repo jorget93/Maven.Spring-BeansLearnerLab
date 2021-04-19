@@ -4,11 +4,12 @@ import com.example.demo.People.Instructor;
 import com.example.demo.People.Instructors;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class InstructorConfig {
 
-    @Bean
+    @Bean("tcUSInstructors")
     public Instructors tcUsaInstructors(){
         Instructor mathew = new Instructor(1L, "Matthew Laudon");
         Instructor bart = new Instructor(2L, "Bart Romanowicz");
@@ -29,5 +30,18 @@ public class InstructorConfig {
                 denise,regina,laura,chelsea,derek,nick,tara,susan,dalia);
     }
 
+//    public Instructors tcUkInstructors(){
+//
+//    }
+
+    @Primary
+    public Instructors instructors(){
+        Instructor kris = new Instructor(1L, "Kris Younger");
+        Instructor dolio = new Instructor(2L, "Dolio Durant");
+        Instructor chris = new Instructor(3L, "Chris Nobles");
+        Instructor dan = new Instructor(4L, "Dan Stabb");
+        Instructor lossie = new Instructor(5L, "Lossie Freeman");
+        return new Instructors(kris, dolio, chris, dan, lossie);
+    }
 
 }
