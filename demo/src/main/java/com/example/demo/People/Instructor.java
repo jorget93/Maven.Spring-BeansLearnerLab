@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.People;
 
 public class Instructor extends Person implements Teacher{
 

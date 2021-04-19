@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.People;
 
 public class Person {
     final Long id;

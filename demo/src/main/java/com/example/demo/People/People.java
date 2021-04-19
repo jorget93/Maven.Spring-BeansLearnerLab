@@ -1,8 +1,7 @@
-package com.example.demo;
+package com.example.demo.People;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 public abstract class People <PersonType extends Person> implements Iterable <PersonType>{

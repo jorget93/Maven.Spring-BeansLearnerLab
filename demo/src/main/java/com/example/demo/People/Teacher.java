@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.People;
 
 public interface Teacher {
     void teach(Learner learner, double numberOfHours);

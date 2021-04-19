@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.People;
 
 import java.util.Iterator;
 import java.util.Spliterator;
@@ -12,16 +12,25 @@ public class Students extends People<Student> {
 
     @Override
     public Iterator<Student> iterator() {
-        return null;
+        return super.findAll().iterator();
     }
 
     @Override
     public void forEach(Consumer<? super Student> action) {
-
+        super.forEach(action);
     }
 
     @Override
     public Spliterator<Student> spliterator() {
-        return null;
+        return super.spliterator();
+    }
+
+    @Override
+    public String toString(){
+        String output = "Students: ";
+        for(Student s: super.findAll()){
+            output += s;
+        }
+        return output;
     }
 }
